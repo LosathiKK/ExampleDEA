@@ -9,14 +9,16 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//To mark this class as a Spring service component (this is making )
 @Service
-@Transactional
+@Transactional // this annotation ensure that the methods in this service class are executed within a transactional context.(if an operation fails, the entire transaction can be rolled back.)
+
 public class CategoryService {
 
-    @Autowired
+    @Autowired //this automatically inject the CategoryRepo bean into this service class.
     private CategoryRepo categoryRepo;
 
-    @Autowired
+    @Autowired //
     private ModelMapper modelMapper;
 
     // Save Method
